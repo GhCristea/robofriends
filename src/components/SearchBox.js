@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {robots} from './robots';
+import {robots} from '../data/robots';
 
 const SearchBox = ({searchfield, searchChange}) => {
 	return (
