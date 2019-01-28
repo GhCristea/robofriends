@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux'
 import CardList from '../components/CardList'
 import SearchBox from '../components/SearchBox'
 import Scroll from '../components/Scroll'
+import {setSearchField} from '../actions'
+import './App.css';
 
 
 class App extends Component {
@@ -35,7 +38,7 @@ class App extends Component {
 		
 		return (
 			<div className = 'tc'>
-				<h1>RoboFriends</h1>
+				<h1 className = 'f1'>RoboFriends</h1>
 				<SearchBox searchChange = {this.onSearchChange} />
 				<Scroll>
 					<CardList robots={filterRobots}/>
@@ -46,4 +49,4 @@ class App extends Component {
 	
 }
 
-export default App;
+export default connect()(App);
